@@ -8,7 +8,7 @@ Welcome to my portfolio repository! This is my personal website showcasing my sk
 
 ## Live Demo
 
-Check out the live portfolio at [Portfolio-Souvik]()
+Check out the live portfolio at [Portfolio-Souvik](https://souvikrajsingh.github.io/portfolio-in-progress/)
 
 ## Features
 

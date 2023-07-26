@@ -184,6 +184,7 @@ transition: 0.3s ease-in-out;
 
 .triangle{
     width: 95px;
+    opacity: 0.18;
 }
 
 /* --------------- Navbar Styling --------------- */
@@ -496,7 +497,54 @@ header.scrolled .logo{
     top: 27%;
     transform: translate(-50%,-50%);
 }
+
+
 /* --------------- Skills Section Styling --------------- */
+
+.skills{
+    overflow: hidden;
+
+}
+
+.skills-box{
+    background-color: var(--bg-color-2);
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+
+.box-desc{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 2rem ;
+}
+
+.skills-wrap{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    /* margin-top: 2rem; */
+    justify-content: space-between;
+}
+
+.skill{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+
+.sk-progress{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+
+
 
 /* --------------- Sevices Section Styling --------------- */
 

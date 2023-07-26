@@ -1,5 +1,15 @@
 const header = document.querySelector('header');
 
+const first_skill = document.querySelector(".skill:first-child");
+const sk_counters = document.querySelectorAll(".counter span");
+const progress_bars = document.querySelectorAll(".skills svg circle");
+
+window.addEventListener("scroll", () => {
+    console.log("he;ll");
+});
+
+
+
 // sticky navbar 
 function stickyNavbar(){
     header.classList.toggle("scrolled" , window.pageYOffset > 0);

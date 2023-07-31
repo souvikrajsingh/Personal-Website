@@ -549,7 +549,7 @@ justify-content: center;
     height: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) rotate(-90deg);
 }
 
 .sk-progress svg circle{
@@ -558,7 +558,7 @@ justify-content: center;
    stroke: var(--main-color-1);
    stroke-linecap: round;
    stroke-dasharray: 427; 
-   stroke-dashoffset: 50;
+   stroke-dashoffset: 427;
    
    /*  radius of the circle = 68[radius] * 2 * 3.14  = 427 */
 }

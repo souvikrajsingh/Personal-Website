@@ -33,6 +33,25 @@ body.dark {
   --text-color: hsl(var(--hue-1), 14%, 51%);
 }
 
+body.dark.st1{
+    fill: hsl(var(--hue-1), 18%, 29%);
+
+}
+
+body.dark .shape.square{
+   opacity: 0.07;
+}
+
+body.dark .toggle-btn{
+    background-color: var(--bg-color-3);
+
+}
+
+body.dark .toggle-btn:hover{
+    background-color: brightness(110%);
+}
+
+
 /* --------------- General Styles --------------- */
 
 *,
@@ -41,6 +60,10 @@ body.dark {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -141,7 +164,13 @@ ul {
     color: #fff;
     font-size: 0.85rem;
     letter-spacing: 0.4px;
+    min-width: 125px;
+    text-align: center;
     text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -268,11 +297,13 @@ header.scrolled .logo{
 
 }
 
-.nav-link:hover{
+.nav-link:hover,
+.nav-link.active{
     color: var(--heading-color);
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after, 
+.nav-link.active::after{
    width: 100%;
    opacity: 0.2;
 }
@@ -511,6 +542,7 @@ header.scrolled .logo{
     padding: 5rem 6rem;
     border-radius: 20px;
     width: 100%;
+    position: relative;
 }
 
 
@@ -595,7 +627,20 @@ justify-content: center;
     font-size: 1rem;
 }
 
-
+.skills .dots{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.skills .square{
+    position: absolute;
+    left: 100%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    /* z-index: -1; */
+}
 
 
 
@@ -606,13 +651,220 @@ justify-content: center;
 
 /* --------------- Portfolio Section Styling --------------- */
 
+.portfolio-header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.portfolio-title{
+    padding-bottom: 1rem;
+}
+
+.filter-btn{
+    display: inline-block;
+    color: var(--heading-color);
+    background-color: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.prt-card{
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bg-color-2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: 265px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.prt-image{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prt-image img{
+    width: 105%;
+}
+
+.prt-desc{
+    padding: 1.1rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prt-desc h3{
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: .95rem;
+    text-transform: capitalize;
+}
+
+.btn.secondary-btn.sm{
+    padding: .07rem .1rem;
+    font-size: .78rem;
+    border-bottom-width: 2px ;
+}
+
+.btn.secondary-btn.sm::before{
+    height: 2px;
+    bottom: -2px;
+}
+
 /* --------------- Testimonials Section Styling --------------- */
 
 /* --------------- Contact Section Styling --------------- */
 
+.contact .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+
+}
+
+.mail{
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.mail i{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 2px;
+    transform: translate(3px);
+    transition: .3s margin-left;
+}
+
+.mail:hover{
+    color: var(--main-color-dark-1);
+}
+
+.mail:hover i{
+    margin-left: 10px;
+}
+
+.contact-form{
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h3{
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    line-height: 0.9;
+}
+
+.form-input{
+    display:inline-block;
+    padding: .9rem 1.5rem;
+    background: var(--bg-color-3);
+    border: 2px solid var(--bg-color-3);
+    width: 100%;
+    border-radius: 17px;
+    font-family: inherit;
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    outline: none;
+    transition: .3s;
+}
+
+.form-input::placeholder{
+    color: var(--text-color);
+}
+.form-input:hover{
+    filter: brightness(97%);
+}
+
+.form-input:valid, .form-input:focus{
+   filter: brightness(100%);
+   background: var(--bg-color-1);
+   border-color: var(--main-color-1);
+}
+textarea.form-input{
+    resize: none;
+    min-height: 170px;
+}
+
+.contact-form .form-input{
+    margin-bottom: 1.5rem;
+}
+
+.contact .square{
+    position: absolute;
+    left: 17%;
+    bottom: 15%;
+    transform: translate(-50%,-50%);
+}
+.contact .triangle{
+    position: absolute;
+    left: 90%;
+    bottom: 98%;
+    transform: translate(-50%,-50%);
+}
+
+
 /* --------------- Subscription Section Styling --------------- */
 
 /* --------------- Footer Styling --------------- */
+
+footer{
+    padding: 4rem 0;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .social-media{
+display: flex;
+}
+
+.social-link{
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   margin-left:1rem ;
+   background-color: var(--bg-color-1);
+   color: var(--text-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.3s;
+}
+
+.social-link:hover{
+    color: var(--text-color);
+
+}
+
 
 /* --------------- 1000px Screens --------------- */
 

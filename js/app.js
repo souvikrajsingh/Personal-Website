@@ -4,8 +4,12 @@ const first_skill = document.querySelector(".skill:first-child");
 const sk_counters = document.querySelectorAll(".counter span");
 const progress_bars = document.querySelectorAll(".skills svg circle");
 
+
+const links  = document.querySelectorAll(".nav-link");
+
 window.addEventListener("scroll", () => {
-    skillsCounter();
+    activeLink();
+   if(!skillsPlayed) skillsCounter();
 });
 
 
@@ -58,8 +62,14 @@ function updateCount(num , maxNum){
     }
 }
 
+let skillsPlayed = false;
+
+
+
 function skillsCounter() {
     if (!hasReached(first_skill)) return;
+
+    skillsPlayed = true;
 
     sk_counters.forEach((counter, i) => {
         let target = +counter.dataset.target;
@@ -73,4 +83,21 @@ function skillsCounter() {
     });
 
     progress_bars.forEach((p) => (p.style.animation = "progress 2s ease-in-out forwards"));
+}
+
+/* ---------- Change Active Link  on Scroll  ---------*/
+
+function activeLink() {
+    let sections = document.querySelectorAll("section[id]");
+    let passedSections = Array.from(sections).map((sct, i) => {
+        return {
+            y: sct.getBoundingClientRect().top - header.offsetHeight,
+            id: i,
+        };
+    });
+
+    let currSectionID = passedSections.find(sct => sct.y <= 0).id;
+
+    links.forEach(l => l.classList.remove("active"));
+    links[currSectionID].classList.add("active");
 }

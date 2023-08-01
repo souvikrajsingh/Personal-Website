@@ -563,6 +563,14 @@ justify-content: center;
    /*  radius of the circle = 68[radius] * 2 * 3.14  = 427 */
 }
 
+
+@keyframes progress{
+    to{
+        stroke-dashoffset: var(--target);
+
+    }
+}
+
 .counter{
     position: absolute;
     top: 50%;

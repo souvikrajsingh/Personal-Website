@@ -37,7 +37,7 @@ sr.reveal(".showcase-info",{delay:500});
 sr.reveal(".showcase-image",{origin: "top", delay:700});
 
 
-/* ---------- Reveal Animation ---------*/
+/* ---------- Skill Progress Bar Animation ---------*/
 
 function hasReached(element) {
     let topPosition = element.getBoundingClientRect().top;
@@ -46,7 +46,33 @@ function hasReached(element) {
     return false;
 }
 
+
+function updateCount(num , maxNum){
+    let currentNum = +num.innerText;
+    
+    if(currentNum < maxNum){
+        num.innerText = currentNum + 1;
+        setTimeout(() => {
+            updateCount(num , maxNum);
+        },12);
+    }
+
+}
+
 function skillsCounter() {
-    if(!hasReached(first_skill)) return ;
-   progress_bars.forEach(p => p.computedStyleMap.animation = "progress 2s ease-in-out ");
+    if (!hasReached(first_skill)) return;
+
+    sk_counters.forEach((counter, i) => {
+        let target = +counter.dataset.target;
+      let strokeValue = 427 - 427 * (target / 100);
+
+      progress_bars[i].style.setProperty("--target", strokeValue);
+
+        setTimeout(() => {
+            updateCount(counter)
+        } , 400 );
+
+    });
+
+    progress_bars.forEach((p) => (p.style.animation = "progress 2s ease-in-out forwards"));
 }

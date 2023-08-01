@@ -566,6 +566,8 @@ justify-content: center;
 
 @keyframes progress{
     to{
+        /* stroke-dashoffset: var(--target); */
+
         stroke-dashoffset: var(--target);
 
     }

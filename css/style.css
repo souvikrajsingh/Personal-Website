@@ -52,6 +52,17 @@ body.dark .toggle-btn:hover{
 }
 
 
+
+body.dark .nav-link:hover::after,
+body.dark .nav-link.active::after{
+   opacity: 0.2;
+}
+
+body.dark .form-input:hover{
+    filter: brightness(110%);
+}
+
+
 /* --------------- General Styles --------------- */
 
 *,

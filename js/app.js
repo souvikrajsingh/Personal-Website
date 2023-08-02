@@ -7,6 +7,8 @@ const progress_bars = document.querySelectorAll(".skills svg circle");
 
 const links  = document.querySelectorAll(".nav-link");
 
+const toggle_btn = document.querySelector(".toggle-btn");
+
 window.addEventListener("scroll", () => {
     activeLink();
    if(!skillsPlayed) skillsCounter();
@@ -96,8 +98,24 @@ function activeLink() {
         };
     });
 
-    let currSectionID = passedSections.find(sct => sct.y <= 0).id;
+    let currSectionID = passedSections.find(sct => sct.y <= 0).id; 
 
     links.forEach(l => l.classList.remove("active"));
     links[currSectionID].classList.add("active");
 }
+
+/* ---------- Change Page Theme ---------*/
+
+function changeTheme(){
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+    } else {
+        document.body.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+    }
+}
+
+toggle_btn.addEventListener("click" , () => {
+    changeTheme();
+});

@@ -26,6 +26,7 @@ Check out the live portfolio at [Portfolio-Souvik](https://souvikrajsingh.github
 - **Smooth Scroll-To-Reveal:** Try scrolling to experience the smooth scrolling effect as elements appear on the page.
 - **Try Svgs in the About me:** Added Svgs in the About Me, sharing a little about me
 - **Loading Animation:** Added a loading like animation under Download CV
+- **Navigation Bar:** Navigation bar is Functioning as it should
 
 ## Work in Progress
 
@@ -34,13 +35,13 @@ My evolving portfolio in HTML, CSS, and JS. Work in progress. Showcasing my skil
  **New Projects:** I'll be adding new projects to showcase my latest work and skills.
  
 - **Design Enhancements:** The portfolio's look and feel will be further refined for a seamless user experience.
-- **Active Navigation Bar:** The Navigation is still work in progress, will add functionality as time goes.
+- ✅**Active Navigation Bar:** The Navigation is still work in progress, will add functionality as time goes.
 - **Skills Section:** I'm planning to add a skill section to share my skills, that i have learned so far.
-- **Blog Section:** I'm planning to add a blog section to share my insights and experiences in the tech world.
+- ✅**Blog Section:** I'm planning to add a blog section to share my insights and experiences in the tech world.
 - **Light and Dark Mode:** I'm planning to add light and dark mode because who doesn't love dark mode.
 - **Modal and Image Slider:** I'm planning to add a skill section to share my skills, that i have learned so far.
-- **Contact Form:** Soon, you'll be able to contact me directly through the portfolio.
-- **Footer Section:** I'm planning to add a Footer section to share my Social Media Links, Contact Information, again a Link to my Resume, Back to Top and much more.
+- ✅**Contact Form:** Soon, you'll be able to contact me directly through the portfolio.
+- ✅**Footer Section:** I'm planning to add a Footer section to share my Social Media Links, Contact Information, again a Link to my Resume, Back to Top and much more.
 - **Making the Website Responsive:** Working on making it more responsive.
 
 ## Contributions

@@ -7,8 +7,7 @@
 Welcome to my portfolio repository! This is my personal website showcasing my skills, projects, and experiences. It's built using HTML, CSS, and JavaScript, aiming to create an engaging and interactive user experience.
 
 ## Live Demo
-
-Check out the live portfolio at [Portfolio-Souvik](https://souvikrajsingh.github.io/portfolio-in-progress/)
+Check out the live portfolio at [Portfolio-Souvik](https://souvik-portfolio-gamma.vercel.app/)
 
 ## Features
 
